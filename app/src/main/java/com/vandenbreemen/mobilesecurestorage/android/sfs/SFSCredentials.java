@@ -89,8 +89,7 @@ public class SFSCredentials implements Parcelable{
     }
 
     @Override
-    public void finalize() {
+    public void finalize() {    //  NOSONAR Need to be able to explicitly carry out password finalization here
         this.password.randomFinalize();
-        this.password = null;
     }
 }
